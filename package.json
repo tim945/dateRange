@@ -5,8 +5,9 @@
   "main": "./dist/dateRange.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
-    "test": "wepback",
-    "build": "wepback"
+    "test": "webpack",
+    "build": "webpack --config webpack.config.prod.js",
+    "deploy": "node gh-pages.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "gh-pages": "^0.11.0",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "style-loader": "^0.13.1",
