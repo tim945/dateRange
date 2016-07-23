@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>DateTimePicker - demo示例</title>
+    <meta name="keywords" content="datetimepicker,daterange,frontui,brickplus">
+    <meta name="description" content="带区间的日期选择器,jQuery插件, brickplus ui的datetimepicker插件">
+    <meta name="author" content="TommyShao">
+    <meta name="copyright" content="www.frontpay.cn All rights">
+    <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    开始时间
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" readonly data-toggle="datetimepicker" name="" value="2016-07-23">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    单个日历
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" readonly data-toggle="datetimepicker" data-option="{calendars: 1}" name="" value="2016-07-23">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> 
+                    项目周期日期
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" readonly data-toggle="datetimepicker" data-option="{period: true, names: ['start_day', 'end_day']}" name="" value="2016-07-23 至 2016-07-30">
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

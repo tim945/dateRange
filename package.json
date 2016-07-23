@@ -1,0 +1,41 @@
+{
+  "name": "datetimepicker",
+  "version": "1.0.0",
+  "description": "calendar pikcer",
+  "main": "./dist/dateRange.js",
+  "scripts": {
+    "dev": "webpack-dev-server --hot --inline",
+    "test": "wepback",
+    "build": "wepback"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomieric/dateRange.git"
+  },
+  "keywords": [
+    "datetimepicker",
+    "daterage",
+    "calendar"
+  ],
+  "author": "TommyShao <tomieric@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomieric/dateRange/issues"
+  },
+  "homepage": "https://github.com/tomieric/dateRange#readme",
+  "dependencies": {
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^2.22.0",
+    "jquery": "^1.11.0"
+  }
+}
