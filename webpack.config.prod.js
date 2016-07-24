@@ -6,6 +6,11 @@ var path = require('path')
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+
+var banner = require('./banner')
+
+var autoprefixer = require('autoprefixer')
 
 module.exports = {
     entry: [
@@ -21,15 +26,15 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
             },
             {
                 test: /\.less$/,
                 loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
             },
             {
-                test: /\.(woff|eot|tff)$/i,
-                loader: 'url?limit=10000&name=fonts/[name].[ext]'
+                test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
+                loader: 'url-loader?limit=30000&name=[name].[ext]'
             }
         ]
     },
@@ -62,6 +67,24 @@ module.exports = {
                 warnings: false
             }
         }),
-        new webpack.HotModuleReplacementPlugin()
-    ]
+        new webpack.HotModuleReplacementPlugin(),
+        new FaviconsWebpackPlugin({
+            logo: './src/Fruit-1.png',
+            icons: {
+                android: true,
+                appleIcon: true,
+                appleStartup: true,
+                favicons: true,
+                firefox: true,
+                windows: false
+            }
+        }),
+        new webpack.BannerPlugin(banner, { raw: true })
+    ],
+    postcss: function() {
+        return {
+            defaults: [autoprefixer],
+            cleaner: [autoprefixer({ browsers: ['last 2 versions', '> 5%', 'IE 8']})]
+        }
+    }
 }

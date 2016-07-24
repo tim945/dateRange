@@ -1,11 +1,12 @@
 /**
  * 日期选择插件
- * by tommyshao <jinhong.shao@frontpay.cn>
+ * by tommyshao <tomieric@gmail.com>
  * fork daterange
  * 2016-07-11
  */
 
-var styleFile = require('./datetimepicker.less')
+// 组件样式
+require('./datetimepicker.less')
 
 var $ = require('jquery')
 
