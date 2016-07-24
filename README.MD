@@ -10,6 +10,8 @@
 
 ## 使用
 
+在页面引入 `datetimepicker.css` 和 `datetimepicker.js`文件，别忘了需要`jQuery`支持。
+
 在 `<input type="text" readonly />` 元素添加 `data-toggle="datetimepicker"` 属性即可绑定插件。
 
 ```
@@ -116,6 +118,36 @@
         </tr>
     </tbody>
 </table>
+
+## 事件监听
+
+### 日历显示 `show.ui.datetimepicker`
+
+```
+$('[data-toggle]').on('show.ui.datetimepicker', function(e, date) {
+  console.log('show')
+})
+```
+
+### 日历隐藏 `hide.ui.datetimepicker`
+
+```
+$('[data-toggle]').on('hide.ui.datetimepicker', function(e, date) {
+  console.log('hide')
+})
+```
+
+### 选择日历 `choose.ui.datetimepicker`
+
+```
+// 带返回参数
+// date 为开始日期，单选日期为选择日期
+// end 日期区间模式时，返回结束日期
+$('[data-toggle]').on('choose.ui.datetimepicker', function(e, date, end) {
+  console.log(date, end)
+  console.log($(this).val())
+})
+```
 
 ## 实例
 
