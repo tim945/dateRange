@@ -38,12 +38,60 @@
                     <input type="text" class="form-control" readonly data-toggle="datetimepicker" data-option="{period: true, names: ['start_day', 'end_day']}" name="" value="2016-07-23 至 2016-07-30">
                 </div>
             </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> 
+                    今天不可选
+                </label>
+                <div class="col-sm-10">
+                    <input data-toggle="datetimepicker" readonly="" type="text" class="form-control" value="2016-07-14" data-option="{ isTodayValid: false }">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> 
+                    未来日期不可选
+                </label>
+                <div class="col-sm-10">
+                    <input data-toggle="datetimepicker" readonly="" type="text" class="form-control" value="2016-07-14" data-option="{ stopToday: true }">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> 
+                    周末不可选
+                </label>
+                <div class="col-sm-10">
+                    <input data-toggle="datetimepicker" readonly="" type="text" class="form-control" value="2016-07-14" data-option="{ weekendDis: true }">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> 
+                    周3周5不可选
+                </label>
+                <div class="col-sm-10">
+                    <input data-toggle="datetimepicker" readonly="" type="text" class="form-control" value="2016-07-14" data-option="{ disCertainDay: [3,5] }">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> 
+                    5号10号15号不可选
+                </label>
+                <div class="col-sm-10">
+                    <input data-toggle="datetimepicker" readonly="" type="text" class="form-control" value="2016-07-14" data-option="{ disCertainDate: [5,10,15] }">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> 
+                    只有每月15号可选
+                </label>
+                <div class="col-sm-10">
+                    <input data-toggle="datetimepicker" readonly="" type="text" class="form-control" value="2016-07-14" data-option="{ disCertainDate: [true,15] }">
+                </div>
+            </div>
         </form>
         <div class="text-success text-center" style="position: fixed; left: 0; bottom: 30px; width: 100%;">
             by TommyShao <a href="https://github.com/tomieric/dateRange">github</a>
             <br>
             <br>
-            <a href="https://github.com/tomieric/dateRange/releases/download/v.1.0.0/archive.zip" class="btn primary">下载插件</a>
+            <a href="https://github.com/tomieric/dateRange/releases/download/v.1.0.0/archive.zip" class="btn primary">下载Datetimepicker插件</a>
         </div>
     </div>
     
