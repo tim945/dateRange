@@ -149,6 +149,14 @@ $('[data-toggle]').on('choose.ui.datetimepicker', function(e, date, end) {
 })
 ```
 
+## 方法 API
+
+`datetimepicker`还提供了设置限定最大日期和最小日期，重置配置参数的方法。
+
+* `$(selector).datetimepicker('setMaxDate', dateStr)`
+* `$(selector).datetimepicker('setMinDate', dateStr)`
+* `$(selector).datetimepicker('setOption', option)`
+
 ## 实例
 
 1. 默认方式
@@ -168,6 +176,31 @@ $('[data-toggle]').on('choose.ui.datetimepicker', function(e, date, end) {
 ```
 <input type="text" data-toggle="datetimepicker" data-option="{period: true, names: ['start_date', 'end_date']}" readonly />
 ```
+
+4. 配置某些日期不可选
+
+```
+<input type="text" data-toggle="datetimepicker" data-option="{period: true, names: ['start_date', 'end_date'], disCertainDate: [5,10,15]}" readonly />
+```
+
+5. 配置只有某些日期可选
+
+```
+<input type="text" data-toggle="datetimepicker" data-option="{period: true, names: ['start_date', 'end_date'], disCertainDate: [true,15]}" readonly />
+```
+
+6. 配置周末不可选
+
+```
+<input type="text" data-toggle="datetimepicker" data-option="{period: true, names: ['start_date', 'end_date'], weekendDis: true }" readonly />
+```
+
+7. 配置周几不可选
+
+```
+<input type="text" data-toggle="datetimepicker" data-option="{period: true, names: ['start_date', 'end_date'], disCertainDay: [3,5] }" readonly />
+```
+etc.
 
 [http://tomieric.github.com/dateRange](http://tomieric.github.com/dateRange)
 
